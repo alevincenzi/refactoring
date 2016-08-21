@@ -35,12 +35,7 @@ public class Customer {
 		
 		while(rentals.hasMoreElements()) {
 			
-			double thisAmount = 0;
 			Rental each = (Rental) rentals.nextElement();
-			
-			// determine amount for each line
-			
-			thisAmount = each.getCharge();
 			
 			// add frequent renter points
 			
@@ -55,11 +50,11 @@ public class Customer {
 			
 			// show figures for this rental
 			
-			result += "\t" + each.getMovie().getTitle() + "\t" + String.valueOf(thisAmount) + "\n";
+			result += "\t" + each.getMovie().getTitle() + "\t" + String.valueOf(each.getCharge()) + "\n";
 			
 			// add up to total amount
 			
-			totalAmount += thisAmount;
+			totalAmount += each.getCharge();
 		}
 		
 		// add footer lines
