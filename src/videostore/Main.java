@@ -20,7 +20,6 @@ public class Main {
 		customer.addRental(new Rental(movie4, 1));
 		
 		System.out.println(customer.statement());
-		
 /*
 Rental Record for Test customer
 	Ghostbusters	9.0
@@ -32,6 +31,18 @@ Rental Record for Test customer
 Amount owned is 43.5
 You earned 8 frequent renter points 
 */
+		System.out.println(customer.htmlStatement());		
+/*
+<H1>Rentals for <EM>Test customer</EM><H1><P>
+Ghostbusters: 9.0<BR>
+Ghostbusters: 15.0<BR>
+The godfather: 2.0<BR>
+The godfather: 2.0<BR>
+The Matrix: 14.0<BR>
+Despicable me: 1.5<BR>
+<P> You owe <EM>43.5</EM><P>
+On this rental you earned <EM>8</EM> frequent renter points<P>
+ */
 	}
 
 }
